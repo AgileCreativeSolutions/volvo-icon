@@ -1,0 +1,320 @@
+@font-face {
+  font-family: 'volvoicons';
+  src: url('../font/volvoicons.eot?66370080');
+  src: url('../font/volvoicons.eot?66370080#iefix') format('embedded-opentype'),
+       url('../font/volvoicons.woff2?66370080') format('woff2'),
+       url('../font/volvoicons.woff?66370080') format('woff'),
+       url('../font/volvoicons.ttf?66370080') format('truetype'),
+       url('../font/volvoicons.svg?66370080#volvoicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'volvoicons';
+    src: url('../font/volvoicons.svg?66370080#volvoicons') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "volvoicons";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-action_add-user_black:before { content: '\e800'; } /* '' */
+.icon-action_basket_black:before { content: '\e801'; } /* '' */
+.icon-action_checkbox_black:before { content: '\e802'; } /* '' */
+.icon-action_clip-board_black:before { content: '\e803'; } /* '' */
+.icon-action_connect_black:before { content: '\e804'; } /* '' */
+.icon-action_digitalisation_black:before { content: '\e805'; } /* '' */
+.icon-action_first-class-delivery_black:before { content: '\e806'; } /* '' */
+.icon-action_handover_black:before { content: '\e807'; } /* '' */
+.icon-action_home_black:before { content: '\e808'; } /* '' */
+.icon-action_implement_black:before { content: '\e809'; } /* '' */
+.icon-action_information_black:before { content: '\e80a'; } /* '' */
+.icon-action_lock-open_black:before { content: '\e80b'; } /* '' */
+.icon-action_locked_black:before { content: '\e80c'; } /* '' */
+.icon-action_magnifier_black:before { content: '\e80d'; } /* '' */
+.icon-action_microphone-off_black:before { content: '\e80f'; } /* '' */
+.icon-action_microphone_black:before { content: '\e810'; } /* '' */
+.icon-action_no-sound_black:before { content: '\e811'; } /* '' */
+.icon-action_phone_black:before { content: '\e812'; } /* '' */
+.icon-action_read_black:before { content: '\e813'; } /* '' */
+.icon-action_settings_black:before { content: '\e814'; } /* '' */
+.icon-action_shopping-cart_black:before { content: '\e815'; } /* '' */
+.icon-action_sound-off_black:before { content: '\e816'; } /* '' */
+.icon-action_sound_black:before { content: '\e817'; } /* '' */
+.icon-action_speed-changes_1_black:before { content: '\e818'; } /* '' */
+.icon-action_speed-changes_2_black:before { content: '\e819'; } /* '' */
+.icon-action_speed_black:before { content: '\e81a'; } /* '' */
+.icon-action_support_black:before { content: '\e81b'; } /* '' */
+.icon-action_timer_black:before { content: '\e81c'; } /* '' */
+.icon-action_trashcan_black:before { content: '\e81d'; } /* '' */
+.icon-action_update_black:before { content: '\e81e'; } /* '' */
+.icon-action_wifi-off_black:before { content: '\e81f'; } /* '' */
+.icon-action_wifi-on_black:before { content: '\e820'; } /* '' */
+.icon-activity_bed_black:before { content: '\e821'; } /* '' */
+.icon-activity_cycle_black:before { content: '\e822'; } /* '' */
+.icon-activity_engineering_black:before { content: '\e823'; } /* '' */
+.icon-activity_my-location_black:before { content: '\e824'; } /* '' */
+.icon-activity_no-photos_black:before { content: '\e825'; } /* '' */
+.icon-activity_no-smart-devices_black:before { content: '\e826'; } /* '' */
+.icon-activity_no-smoking_black:before { content: '\e827'; } /* '' */
+.icon-action_mail_black:before { content: '\e828'; } /* '' */
+.icon-activity_quotation_black:before { content: '\e829'; } /* '' */
+.icon-activity_recycle_black:before { content: '\e82a'; } /* '' */
+.icon-activity_target_black:before { content: '\e82b'; } /* '' */
+.icon-activity_view_black:before { content: '\e82c'; } /* '' */
+.icon-activity_warning_black:before { content: '\e82d'; } /* '' */
+.icon-building_assembly-line_black:before { content: '\e82e'; } /* '' */
+.icon-building_construction-worker_black:before { content: '\e82f'; } /* '' */
+.icon-building_easily-accessible_black:before { content: '\e830'; } /* '' */
+.icon-building_factories_black:before { content: '\e831'; } /* '' */
+.icon-building_portfolio_black:before { content: '\e832'; } /* '' */
+.icon-building_safety-belt_black:before { content: '\e833'; } /* '' */
+.icon-building_sustainability_black:before { content: '\e834'; } /* '' */
+.icon-building_volvo-production-system_black:before { content: '\e835'; } /* '' */
+.icon-building_warehouse_black:before { content: '\e836'; } /* '' */
+.icon-device_camera_black:before { content: '\e838'; } /* '' */
+.icon-device_devices_black:before { content: '\e839'; } /* '' */
+.icon-device_fax_black:before { content: '\e83a'; } /* '' */
+.icon-device_laptop_black:before { content: '\e83b'; } /* '' */
+.icon-device_mobile-phone_black:before { content: '\e83c'; } /* '' */
+.icon-file_confidental_black:before { content: '\e83d'; } /* '' */
+.icon-file_copy_black:before { content: '\e83e'; } /* '' */
+.icon-file_document_black:before { content: '\e83f'; } /* '' */
+.icon-file_landscape_black:before { content: '\e840'; } /* '' */
+.icon-file_pdf_black:before { content: '\e841'; } /* '' */
+.icon-finance_bar-chart_black:before { content: '\e842'; } /* '' */
+.icon-finance_chart-up_black:before { content: '\e844'; } /* '' */
+.icon-finance_chart_black:before { content: '\e845'; } /* '' */
+.icon-finance_legal_black:before { content: '\e847'; } /* '' */
+.icon-finance_linechart_black:before { content: '\e848'; } /* '' */
+.icon-finance_money_black:before { content: '\e849'; } /* '' */
+.icon-finance_piechart_black:before { content: '\e84a'; } /* '' */
+.icon-navigation_detail-map_black:before { content: '\e84b'; } /* '' */
+.icon-navigation_flag_black:before { content: '\e84c'; } /* '' */
+.icon-navigation_map_black:before { content: '\e84d'; } /* '' */
+.icon-navigation_pin-position_black:before { content: '\e84e'; } /* '' */
+.icon-navigation_position-indicator_black:before { content: '\e84f'; } /* '' */
+.icon-navigation_starttoend_black:before { content: '\e850'; } /* '' */
+.icon-object_anchor_black:before { content: '\e851'; } /* '' */
+.icon-object_bell_black:before { content: '\e852'; } /* '' */
+.icon-object_case_black:before { content: '\e853'; } /* '' */
+.icon-object_certificate_black:before { content: '\e854'; } /* '' */
+.icon-object_coffee-mug_black:before { content: '\e855'; } /* '' */
+.icon-object_coffee_black:before { content: '\e856'; } /* '' */
+.icon-object_compass_black:before { content: '\e857'; } /* '' */
+.icon-object_cutlery_black:before { content: '\e858'; } /* '' */
+.icon-object_devices_black:before { content: '\e859'; } /* '' */
+.icon-object_diamond_black:before { content: '\e85a'; } /* '' */
+.icon-object_drop_black:before { content: '\e85b'; } /* '' */
+.icon-object_face-mask_black:before { content: '\e85c'; } /* '' */
+.icon-object_film_black:before { content: '\e85d'; } /* '' */
+.icon-object_film_camera_black:before { content: '\e85e'; } /* '' */
+.icon-object_fuel_black:before { content: '\e85f'; } /* '' */
+.icon-object_gaming_black:before { content: '\e860'; } /* '' */
+.icon-object_gift_black:before { content: '\e861'; } /* '' */
+.icon-object_horse-shoe_black:before { content: '\e862'; } /* '' */
+.icon-object_id-card_black:before { content: '\e863'; } /* '' */
+.icon-object_info-book_black:before { content: '\e864'; } /* '' */
+.icon-object_key_black:before { content: '\e865'; } /* '' */
+.icon-object_labeltag_black:before { content: '\e866'; } /* '' */
+.icon-object_laptop_black:before { content: '\e867'; } /* '' */
+.icon-object_lifebuoy_black:before { content: '\e868'; } /* '' */
+.icon-object_light-bulb_black:before { content: '\e869'; } /* '' */
+.icon-object_map_black:before { content: '\e86a'; } /* '' */
+.icon-object_mobile-phone_black:before { content: '\e86b'; } /* '' */
+.icon-object_newspaper_black:before { content: '\e86c'; } /* '' */
+.icon-object_pages_black:before { content: '\e86d'; } /* '' */
+.icon-object_paperclip_black:before { content: '\e86e'; } /* '' */
+.icon-object_pen_black:before { content: '\e86f'; } /* '' */
+.icon-object_pen_ruler_black:before { content: '\e870'; } /* '' */
+.icon-object_pin_black:before { content: '\e871'; } /* '' */
+.icon-object_portfolio_black:before { content: '\e872'; } /* '' */
+.icon-object_puzzle_black:before { content: '\e873'; } /* '' */
+.icon-object_qr-scan_black:before { content: '\e874'; } /* '' */
+.icon-object_safety-shoes_black:before { content: '\e875'; } /* '' */
+.icon-object_safety-vest_black:before { content: '\e876'; } /* '' */
+.icon-object_scissors_black:before { content: '\e877'; } /* '' */
+.icon-object_shoppingcart_black:before { content: '\e878'; } /* '' */
+.icon-object_speaker_black:before { content: '\e879'; } /* '' */
+.icon-object_speed_black:before { content: '\e87a'; } /* '' */
+.icon-object_steeringwheel_black:before { content: '\e87b'; } /* '' */
+.icon-object_timer_black:before { content: '\e87c'; } /* '' */
+.icon-object_trophy_black:before { content: '\e87d'; } /* '' */
+.icon-object_umbrella_black:before { content: '\e87e'; } /* '' */
+.icon-object_weight_1_black:before { content: '\e87f'; } /* '' */
+.icon-object_weight_2_black:before { content: '\e880'; } /* '' */
+.icon-object_wrench_black:before { content: '\e881'; } /* '' */
+.icon-people_crowd_black:before { content: '\e882'; } /* '' */
+.icon-people_kid_black:before { content: '\e883'; } /* '' */
+.icon-people_man_black:before { content: '\e884'; } /* '' */
+.icon-people_open-dialogue_black:before { content: '\e885'; } /* '' */
+.icon-people_operator_black:before { content: '\e886'; } /* '' */
+.icon-people_person-driver_black:before { content: '\e887'; } /* '' */
+.icon-people_person_black:before { content: '\e888'; } /* '' */
+.icon-people_wheelchair_black:before { content: '\e889'; } /* '' */
+.icon-people_woman_black:before { content: '\e88a'; } /* '' */
+.icon-product_ce_articulated-hauler_black:before { content: '\e88b'; } /* '' */
+.icon-product_ce_crawler_black:before { content: '\e88c'; } /* '' */
+.icon-product_ce_excavator_black:before { content: '\e88d'; } /* '' */
+.icon-product_ce_hauler_black:before { content: '\e88e'; } /* '' */
+.icon-product_ce_wheel-loader_black:before { content: '\e88f'; } /* '' */
+.icon-product_construction_black:before { content: '\e890'; } /* '' */
+.icon-product_distribution_black:before { content: '\e891'; } /* '' */
+.icon-product_longhaul_black:before { content: '\e892'; } /* '' */
+.icon-product_service-and-maintenance_black:before { content: '\e893'; } /* '' */
+.icon-product_v_bus_black:before { content: '\e894'; } /* '' */
+.icon-product_v_penta_marine_black:before { content: '\e895'; } /* '' */
+.icon-product_v_truck_black:before { content: '\e896'; } /* '' */
+.icon-product_v_vtna_black:before { content: '\e897'; } /* '' */
+.icon-sustainability_battery_black:before { content: '\e898'; } /* '' */
+.icon-sustainability_biodiversity_black:before { content: '\e899'; } /* '' */
+.icon-sustainability_chemical_black:before { content: '\e89a'; } /* '' */
+.icon-sustainability_climate_greenhouse_black:before { content: '\e89b'; } /* '' */
+.icon-sustainability_climate_resources_black:before { content: '\e89c'; } /* '' */
+.icon-sustainability_earth_black:before { content: '\e89d'; } /* '' */
+.icon-sustainability_energy-01_black:before { content: '\e89e'; } /* '' */
+.icon-sustainability_energy-02_black:before { content: '\e89f'; } /* '' */
+.icon-sustainability_energy-balance-01_black:before { content: '\e8a0'; } /* '' */
+.icon-sustainability_energy-balance-02_black:before { content: '\e8a1'; } /* '' */
+.icon-sustainability_energy-kwh_black:before { content: '\e8a2'; } /* '' */
+.icon-sustainability_energy_black:before { content: '\e8a3'; } /* '' */
+.icon-sustainability_ev-charge_black:before { content: '\e8a4'; } /* '' */
+.icon-sustainability_fish_black:before { content: '\e8a5'; } /* '' */
+.icon-sustainability_heat-exchange_black:before { content: '\e8a6'; } /* '' */
+.icon-sustainability_heat-recovery_black:before { content: '\e8a7'; } /* '' */
+.icon-sustainability_rain-cloud_black:before { content: '\e8a8'; } /* '' */
+.icon-sustainability_recycling_black:before { content: '\e8a9'; } /* '' */
+.icon-sustainability_save-water_black:before { content: '\e8aa'; } /* '' */
+.icon-sustainability_solarpower-01_black:before { content: '\e8ab'; } /* '' */
+.icon-sustainability_solarpower-02_black:before { content: '\e8ac'; } /* '' */
+.icon-sustainability_sun_black:before { content: '\e8ad'; } /* '' */
+.icon-sustainability_waste-recycling_black:before { content: '\e8ae'; } /* '' */
+.icon-sustainability_waste_black:before { content: '\e8af'; } /* '' */
+.icon-sustainability_windpower_black:before { content: '\e8b0'; } /* '' */
+.icon-symbol_add-plus_black:before { content: '\e8b1'; } /* '' */
+.icon-symbol_arrow-down_black:before { content: '\e8b2'; } /* '' */
+.icon-symbol_arrow-left_black:before { content: '\e8b3'; } /* '' */
+.icon-symbol_arrow-right_black:before { content: '\e8b4'; } /* '' */
+.icon-symbol_arrow-up_black:before { content: '\e8b5'; } /* '' */
+.icon-symbol_c_black:before { content: '\e8b6'; } /* '' */
+.icon-symbol_check-square_black:before { content: '\e8b7'; } /* '' */
+.icon-symbol_check_black:before { content: '\e8b8'; } /* '' */
+.icon-symbol_clear-agreements_black:before { content: '\e8b9'; } /* '' */
+.icon-symbol_dollar_black:before { content: '\e8ba'; } /* '' */
+.icon-symbol_euro_black:before { content: '\e8bb'; } /* '' */
+.icon-symbol_exclamation-mark_black:before { content: '\e8bc'; } /* '' */
+.icon-symbol_fuel-saving_1_black:before { content: '\e8bd'; } /* '' */
+.icon-symbol_fuel-saving_2_black:before { content: '\e8be'; } /* '' */
+.icon-symbol_hashtag_black:before { content: '\e8bf'; } /* '' */
+.icon-symbol_info_black:before { content: '\e8c0'; } /* '' */
+.icon-symbol_mail_black:before { content: '\e8c1'; } /* '' */
+.icon-symbol_minus_black:before { content: '\e8c2'; } /* '' */
+.icon-symbol_performance_black:before { content: '\e8c3'; } /* '' */
+.icon-symbol_right-first-time_black:before { content: '\e8c4'; } /* '' */
+.icon-symbol_star_black:before { content: '\e8c5'; } /* '' */
+.icon-symbol_warning_black:before { content: '\e8c6'; } /* '' */
+.icon-time_alarm_black:before { content: '\e8c7'; } /* '' */
+.icon-time_clock_black:before { content: '\e8c8'; } /* '' */
+.icon-time_date_black:before { content: '\e8c9'; } /* '' */
+.icon-time_empty-calendar_black:before { content: '\e8ca'; } /* '' */
+.icon-time_moon_black:before { content: '\e8cb'; } /* '' */
+.icon-time_set-time_black:before { content: '\e8cc'; } /* '' */
+.icon-transportation_airplane_black:before { content: '\e8cd'; } /* '' */
+.icon-transportation_boat_black:before { content: '\e8ce'; } /* '' */
+.icon-transportation_car_black:before { content: '\e8cf'; } /* '' */
+.icon-transportation_metro_black:before { content: '\e8d0'; } /* '' */
+.icon-transportation_train_black:before { content: '\e8d1'; } /* '' */
+.icon-world_2-fingers_black:before { content: '\e8d2'; } /* '' */
+.icon-world_building_black:before { content: '\e8d3'; } /* '' */
+.icon-world_built-by-people_black:before { content: '\e8d4'; } /* '' */
+.icon-world_chat-bubble_black:before { content: '\e8d5'; } /* '' */
+.icon-world_chat-bubbles_black:before { content: '\e8d6'; } /* '' */
+.icon-world_city_black:before { content: '\e8d7'; } /* '' */
+.icon-world_climate_black:before { content: '\e8d8'; } /* '' */
+.icon-world_cloud-download_black:before { content: '\e8d9'; } /* '' */
+.icon-world_cloud-upload_black:before { content: '\e8da'; } /* '' */
+.icon-world_cloud_black:before { content: '\e8db'; } /* '' */
+.icon-world_eye_black:before { content: '\e8dc'; } /* '' */
+.icon-world_foot_black:before { content: '\e8dd'; } /* '' */
+.icon-world_globe_black:before { content: '\e8de'; } /* '' */
+.icon-world_hall_black:before { content: '\e8df'; } /* '' */
+.icon-world_hand-stop_black:before { content: '\e8e0'; } /* '' */
+.icon-world_handfeast_black:before { content: '\e8e1'; } /* '' */
+.icon-world_handshake_black:before { content: '\e8e2'; } /* '' */
+.icon-world_heart_black:before { content: '\e8e3'; } /* '' */
+.icon-world_highway_black:before { content: '\e8e4'; } /* '' */
+.icon-world_industry_black:before { content: '\e8e5'; } /* '' */
+.icon-world_landscape_black:before { content: '\e8e6'; } /* '' */
+.icon-world_match-customer-needs_black:before { content: '\e8e7'; } /* '' */
+.icon-world_ongoing-chat_black:before { content: '\e8e8'; } /* '' */
+.icon-world_pedestrian-lanes_black:before { content: '\e8e9'; } /* '' */
+.icon-world_slope_1_black:before { content: '\e8ea'; } /* '' */
+.icon-world_slope_2_black:before { content: '\e8eb'; } /* '' */
+.icon-world_snow_black:before { content: '\e8ec'; } /* '' */
+.icon-world_team-work_black:before { content: '\e8ed'; } /* '' */
+.icon-world_thums-down_black:before { content: '\e8ee'; } /* '' */
+.icon-world_thums-up_black:before { content: '\e8ef'; } /* '' */
+.icon-world_tree_black:before { content: '\e8f0'; } /* '' */
+.icon-world_warm-welcome_black:before { content: '\e8f1'; } /* '' */
+.icon-device_calculator_black:before { content: '\e8f2'; } /* '' */
+.icon-finance_calculator_black:before { content: '\e8f3'; } /* '' */
+.icon-icon-ac-check:before { content: '\e8f4'; } /* '' */
+.icon-icon-accessories:before { content: '\e8f5'; } /* '' */
+.icon-icon-air-cabin-filter:before { content: '\e8f6'; } /* '' */
+.icon-icon-alignment:before { content: '\e8f7'; } /* '' */
+.icon-icon-battery:before { content: '\e8f8'; } /* '' */
+.icon-icon-brakes:before { content: '\e8f9'; } /* '' */
+.icon-icon-fluid-levels:before { content: '\e8fa'; } /* '' */
+.icon-icon-maintenance:before { content: '\e8fb'; } /* '' */
+.icon-icon-motor-oil-check:before { content: '\e8fc'; } /* '' */
+.icon-icon-motor-oil:before { content: '\e8fd'; } /* '' */
+.icon-icon-multi-point-inspection:before { content: '\e8fe'; } /* '' */
+.icon-icon-odometer:before { content: '\e8ff'; } /* '' */
+.icon-icon-oil-filter:before { content: '\e900'; } /* '' */
+.icon-icon-service-fluids:before { content: '\e901'; } /* '' */
+.icon-icon-service-schedule:before { content: '\e902'; } /* '' */
+.icon-icon-spark-plug:before { content: '\e903'; } /* '' */
+.icon-icon-timing-belt:before { content: '\e904'; } /* '' */
+.icon-icon-tire-pressure:before { content: '\e905'; } /* '' */
+.icon-icon-tire:before { content: '\e906'; } /* '' */
+.icon-icon-transmission:before { content: '\e907'; } /* '' */
+.icon-icon-vehicle-collision:before { content: '\e908'; } /* '' */
+.icon-icon-vehicle-health:before { content: '\e909'; } /* '' */
+.icon-icon-vehicle-protection:before { content: '\e90a'; } /* '' */
+.icon-icon-windshield-wipers:before { content: '\e90b'; } /* '' */

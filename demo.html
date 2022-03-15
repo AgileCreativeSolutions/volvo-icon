@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <meta charset="UTF-8">
+  <style>
+    html {
+      font-size: 100%;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+    a:focus {
+      outline: thin dotted #333;
+      outline: 5px auto -webkit-focus-ring-color;
+      outline-offset: -2px;
+    }
+    a:hover,
+    a:active {
+      outline: 0;
+    }
+    input {
+      margin: 0;
+      font-size: 100%;
+      vertical-align: middle;
+      *overflow: visible;
+      line-height: normal;
+    }
+    input::-moz-focus-inner {
+      padding: 0;
+      border: 0;
+    }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      color: #333;
+      background-color: #fff;
+    }
+    a {
+      color: #08c;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #005580;
+      text-decoration: underline;
+    }
+    .row {
+      margin-left: -20px;
+      *zoom: 1;
+    }
+    .row:before,
+    .row:after {
+      display: table;
+      content: "";
+      line-height: 0;
+    }
+    .row:after {
+      clear: both;
+    }
+    .span3 {
+      float: left;
+      min-height: 1px;
+      margin-left: 20px;
+      width: 220px;
+    }
+    .container {
+      width: 940px;
+      margin-right: auto;
+      margin-left: auto;
+      *zoom: 1;
+    }
+    .container:before,
+    .container:after {
+      display: table;
+      content: "";
+      line-height: 0;
+    }
+    .container:after {
+      clear: both;
+    }
+    small {
+      font-size: 85%;
+    }
+    h1 {
+      margin: 10px 0;
+      font-family: inherit;
+      font-weight: bold;
+      line-height: 20px;
+      color: inherit;
+      text-rendering: optimizelegibility;
+      line-height: 40px;
+      font-size: 38.5px;
+    }
+    h1 small {
+      font-weight: normal;
+      line-height: 1;
+      color: #999;
+      font-size: 24.5px;
+    }
+
+    body {
+      margin-top: 90px;
+    }
+    .header {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      margin-left: -480px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      padding-top: 10px;
+      z-index: 10;
+    }
+    .footer {
+      color: #ddd;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .footer a {
+      color: #ccc;
+      text-decoration: underline;
+    }
+    .the-icons {
+      font-size: 14px;
+      line-height: 24px;
+    }
+    .switch {
+      position: absolute;
+      right: 0;
+      bottom: 10px;
+      color: #666;
+    }
+    .switch input {
+      margin-right: 0.3em;
+    }
+    .codesOn .i-name {
+      display: none;
+    }
+    .codesOn .i-code {
+      display: inline;
+    }
+    .i-code {
+      display: none;
+    }
+    @font-face {
+      font-family: 'volvoicons';
+      src: url('./font/volvoicons.eot?23214637');
+      src: url('./font/volvoicons.eot?23214637#iefix') format('embedded-opentype'),
+           url('./font/volvoicons.woff?23214637') format('woff'),
+           url('./font/volvoicons.ttf?23214637') format('truetype'),
+           url('./font/volvoicons.svg?23214637#volvoicons') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .volvo-icon {
+      font-family: "volvoicons";
+      font-style: normal;
+      font-weight: normal;
+      speak: never;
+     
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      /* opacity: .8; */
+     
+      /* For safety - reset parent styles, that can break glyph codes*/
+      font-variant: normal;
+      text-transform: none;
+     
+      /* fix buttons height, for twitter bootstrap */
+      line-height: 1em;
+     
+      /* Animation center compensation - margins should be symmetric */
+      /* remove if not needed */
+      margin-left: .2em;
+     
+      /* You can be more comfortable with increased icons size */
+      /* font-size: 120%; */
+     
+      /* Font smoothing. That was taken from TWBS */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+     
+      /* Uncomment for 3D effect */
+      /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    }
+    </style>
+    <link rel="stylesheet" href="css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/" + font.fontname + "-ie7.css"><![endif]-->
+    <script>
+      function toggleCodes(on) {
+        var obj = document.getElementById('icons');
+      
+        if (on) {
+          obj.className += ' codesOn';
+        } else {
+          obj.className = obj.className.replace(' codesOn', '');
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container header">
+      <h1>volvoicons <small>font demo</small></h1>
+      <label class="switch">
+        <input type="checkbox" onclick="toggleCodes(this.checked)">show codes
+      </label>
+    </div>
+    <div class="container" id="icons">
+      <div class="row">
+        <div class="span3" title="Code: 0xe800">
+          <i class="volvo-icon icon-action_add-user_black">&#xe800;</i> <span class="i-name">icon-action_add-user_black</span><span class="i-code">0xe800</span>
+        </div>
+        <div class="span3" title="Code: 0xe801">
+          <i class="volvo-icon icon-action_basket_black">&#xe801;</i> <span class="i-name">icon-action_basket_black</span><span class="i-code">0xe801</span>
+        </div>
+        <div class="span3" title="Code: 0xe802">
+          <i class="volvo-icon icon-action_checkbox_black">&#xe802;</i> <span class="i-name">icon-action_checkbox_black</span><span class="i-code">0xe802</span>
+        </div>
+        <div class="span3" title="Code: 0xe803">
+          <i class="volvo-icon icon-action_clip-board_black">&#xe803;</i> <span class="i-name">icon-action_clip-board_black</span><span class="i-code">0xe803</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe804">
+          <i class="volvo-icon icon-action_connect_black">&#xe804;</i> <span class="i-name">icon-action_connect_black</span><span class="i-code">0xe804</span>
+        </div>
+        <div class="span3" title="Code: 0xe805">
+          <i class="volvo-icon icon-action_digitalisation_black">&#xe805;</i> <span class="i-name">icon-action_digitalisation_black</span><span class="i-code">0xe805</span>
+        </div>
+        <div class="span3" title="Code: 0xe806">
+          <i class="volvo-icon icon-action_first-class-delivery_black">&#xe806;</i> <span class="i-name">icon-action_first-class-delivery_black</span><span class="i-code">0xe806</span>
+        </div>
+        <div class="span3" title="Code: 0xe807">
+          <i class="volvo-icon icon-action_handover_black">&#xe807;</i> <span class="i-name">icon-action_handover_black</span><span class="i-code">0xe807</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe808">
+          <i class="volvo-icon icon-action_home_black">&#xe808;</i> <span class="i-name">icon-action_home_black</span><span class="i-code">0xe808</span>
+        </div>
+        <div class="span3" title="Code: 0xe809">
+          <i class="volvo-icon icon-action_implement_black">&#xe809;</i> <span class="i-name">icon-action_implement_black</span><span class="i-code">0xe809</span>
+        </div>
+        <div class="span3" title="Code: 0xe80a">
+          <i class="volvo-icon icon-action_information_black">&#xe80a;</i> <span class="i-name">icon-action_information_black</span><span class="i-code">0xe80a</span>
+        </div>
+        <div class="span3" title="Code: 0xe80b">
+          <i class="volvo-icon icon-action_lock-open_black">&#xe80b;</i> <span class="i-name">icon-action_lock-open_black</span><span class="i-code">0xe80b</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe80c">
+          <i class="volvo-icon icon-action_locked_black">&#xe80c;</i> <span class="i-name">icon-action_locked_black</span><span class="i-code">0xe80c</span>
+        </div>
+        <div class="span3" title="Code: 0xe80d">
+          <i class="volvo-icon icon-action_magnifier_black">&#xe80d;</i> <span class="i-name">icon-action_magnifier_black</span><span class="i-code">0xe80d</span>
+        </div>
+        <div class="span3" title="Code: 0xe80f">
+          <i class="volvo-icon icon-action_microphone-off_black">&#xe80f;</i> <span class="i-name">icon-action_microphone-off_black</span><span class="i-code">0xe80f</span>
+        </div>
+        <div class="span3" title="Code: 0xe810">
+          <i class="volvo-icon icon-action_microphone_black">&#xe810;</i> <span class="i-name">icon-action_microphone_black</span><span class="i-code">0xe810</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe811">
+          <i class="volvo-icon icon-action_no-sound_black">&#xe811;</i> <span class="i-name">icon-action_no-sound_black</span><span class="i-code">0xe811</span>
+        </div>
+        <div class="span3" title="Code: 0xe812">
+          <i class="volvo-icon icon-action_phone_black">&#xe812;</i> <span class="i-name">icon-action_phone_black</span><span class="i-code">0xe812</span>
+        </div>
+        <div class="span3" title="Code: 0xe813">
+          <i class="volvo-icon icon-action_read_black">&#xe813;</i> <span class="i-name">icon-action_read_black</span><span class="i-code">0xe813</span>
+        </div>
+        <div class="span3" title="Code: 0xe814">
+          <i class="volvo-icon icon-action_settings_black">&#xe814;</i> <span class="i-name">icon-action_settings_black</span><span class="i-code">0xe814</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe815">
+          <i class="volvo-icon icon-action_shopping-cart_black">&#xe815;</i> <span class="i-name">icon-action_shopping-cart_black</span><span class="i-code">0xe815</span>
+        </div>
+        <div class="span3" title="Code: 0xe816">
+          <i class="volvo-icon icon-action_sound-off_black">&#xe816;</i> <span class="i-name">icon-action_sound-off_black</span><span class="i-code">0xe816</span>
+        </div>
+        <div class="span3" title="Code: 0xe817">
+          <i class="volvo-icon icon-action_sound_black">&#xe817;</i> <span class="i-name">icon-action_sound_black</span><span class="i-code">0xe817</span>
+        </div>
+        <div class="span3" title="Code: 0xe818">
+          <i class="volvo-icon icon-action_speed-changes_1_black">&#xe818;</i> <span class="i-name">icon-action_speed-changes_1_black</span><span class="i-code">0xe818</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe819">
+          <i class="volvo-icon icon-action_speed-changes_2_black">&#xe819;</i> <span class="i-name">icon-action_speed-changes_2_black</span><span class="i-code">0xe819</span>
+        </div>
+        <div class="span3" title="Code: 0xe81a">
+          <i class="volvo-icon icon-action_speed_black">&#xe81a;</i> <span class="i-name">icon-action_speed_black</span><span class="i-code">0xe81a</span>
+        </div>
+        <div class="span3" title="Code: 0xe81b">
+          <i class="volvo-icon icon-action_support_black">&#xe81b;</i> <span class="i-name">icon-action_support_black</span><span class="i-code">0xe81b</span>
+        </div>
+        <div class="span3" title="Code: 0xe81c">
+          <i class="volvo-icon icon-action_timer_black">&#xe81c;</i> <span class="i-name">icon-action_timer_black</span><span class="i-code">0xe81c</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe81d">
+          <i class="volvo-icon icon-action_trashcan_black">&#xe81d;</i> <span class="i-name">icon-action_trashcan_black</span><span class="i-code">0xe81d</span>
+        </div>
+        <div class="span3" title="Code: 0xe81e">
+          <i class="volvo-icon icon-action_update_black">&#xe81e;</i> <span class="i-name">icon-action_update_black</span><span class="i-code">0xe81e</span>
+        </div>
+        <div class="span3" title="Code: 0xe81f">
+          <i class="volvo-icon icon-action_wifi-off_black">&#xe81f;</i> <span class="i-name">icon-action_wifi-off_black</span><span class="i-code">0xe81f</span>
+        </div>
+        <div class="span3" title="Code: 0xe820">
+          <i class="volvo-icon icon-action_wifi-on_black">&#xe820;</i> <span class="i-name">icon-action_wifi-on_black</span><span class="i-code">0xe820</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe821">
+          <i class="volvo-icon icon-activity_bed_black">&#xe821;</i> <span class="i-name">icon-activity_bed_black</span><span class="i-code">0xe821</span>
+        </div>
+        <div class="span3" title="Code: 0xe822">
+          <i class="volvo-icon icon-activity_cycle_black">&#xe822;</i> <span class="i-name">icon-activity_cycle_black</span><span class="i-code">0xe822</span>
+        </div>
+        <div class="span3" title="Code: 0xe823">
+          <i class="volvo-icon icon-activity_engineering_black">&#xe823;</i> <span class="i-name">icon-activity_engineering_black</span><span class="i-code">0xe823</span>
+        </div>
+        <div class="span3" title="Code: 0xe824">
+          <i class="volvo-icon icon-activity_my-location_black">&#xe824;</i> <span class="i-name">icon-activity_my-location_black</span><span class="i-code">0xe824</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe825">
+          <i class="volvo-icon icon-activity_no-photos_black">&#xe825;</i> <span class="i-name">icon-activity_no-photos_black</span><span class="i-code">0xe825</span>
+        </div>
+        <div class="span3" title="Code: 0xe826">
+          <i class="volvo-icon icon-activity_no-smart-devices_black">&#xe826;</i> <span class="i-name">icon-activity_no-smart-devices_black</span><span class="i-code">0xe826</span>
+        </div>
+        <div class="span3" title="Code: 0xe827">
+          <i class="volvo-icon icon-activity_no-smoking_black">&#xe827;</i> <span class="i-name">icon-activity_no-smoking_black</span><span class="i-code">0xe827</span>
+        </div>
+        <div class="span3" title="Code: 0xe828">
+          <i class="volvo-icon icon-action_mail_black">&#xe828;</i> <span class="i-name">icon-action_mail_black</span><span class="i-code">0xe828</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe829">
+          <i class="volvo-icon icon-activity_quotation_black">&#xe829;</i> <span class="i-name">icon-activity_quotation_black</span><span class="i-code">0xe829</span>
+        </div>
+        <div class="span3" title="Code: 0xe82a">
+          <i class="volvo-icon icon-activity_recycle_black">&#xe82a;</i> <span class="i-name">icon-activity_recycle_black</span><span class="i-code">0xe82a</span>
+        </div>
+        <div class="span3" title="Code: 0xe82b">
+          <i class="volvo-icon icon-activity_target_black">&#xe82b;</i> <span class="i-name">icon-activity_target_black</span><span class="i-code">0xe82b</span>
+        </div>
+        <div class="span3" title="Code: 0xe82c">
+          <i class="volvo-icon icon-activity_view_black">&#xe82c;</i> <span class="i-name">icon-activity_view_black</span><span class="i-code">0xe82c</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe82d">
+          <i class="volvo-icon icon-activity_warning_black">&#xe82d;</i> <span class="i-name">icon-activity_warning_black</span><span class="i-code">0xe82d</span>
+        </div>
+        <div class="span3" title="Code: 0xe82e">
+          <i class="volvo-icon icon-building_assembly-line_black">&#xe82e;</i> <span class="i-name">icon-building_assembly-line_black</span><span class="i-code">0xe82e</span>
+        </div>
+        <div class="span3" title="Code: 0xe82f">
+          <i class="volvo-icon icon-building_construction-worker_black">&#xe82f;</i> <span class="i-name">icon-building_construction-worker_black</span><span class="i-code">0xe82f</span>
+        </div>
+        <div class="span3" title="Code: 0xe830">
+          <i class="volvo-icon icon-building_easily-accessible_black">&#xe830;</i> <span class="i-name">icon-building_easily-accessible_black</span><span class="i-code">0xe830</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe831">
+          <i class="volvo-icon icon-building_factories_black">&#xe831;</i> <span class="i-name">icon-building_factories_black</span><span class="i-code">0xe831</span>
+        </div>
+        <div class="span3" title="Code: 0xe832">
+          <i class="volvo-icon icon-building_portfolio_black">&#xe832;</i> <span class="i-name">icon-building_portfolio_black</span><span class="i-code">0xe832</span>
+        </div>
+        <div class="span3" title="Code: 0xe833">
+          <i class="volvo-icon icon-building_safety-belt_black">&#xe833;</i> <span class="i-name">icon-building_safety-belt_black</span><span class="i-code">0xe833</span>
+        </div>
+        <div class="span3" title="Code: 0xe834">
+          <i class="volvo-icon icon-building_sustainability_black">&#xe834;</i> <span class="i-name">icon-building_sustainability_black</span><span class="i-code">0xe834</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe835">
+          <i class="volvo-icon icon-building_volvo-production-system_black">&#xe835;</i> <span class="i-name">icon-building_volvo-production-system_black</span><span class="i-code">0xe835</span>
+        </div>
+        <div class="span3" title="Code: 0xe836">
+          <i class="volvo-icon icon-building_warehouse_black">&#xe836;</i> <span class="i-name">icon-building_warehouse_black</span><span class="i-code">0xe836</span>
+        </div>
+        <div class="span3" title="Code: 0xe838">
+          <i class="volvo-icon icon-device_camera_black">&#xe838;</i> <span class="i-name">icon-device_camera_black</span><span class="i-code">0xe838</span>
+        </div>
+        <div class="span3" title="Code: 0xe839">
+          <i class="volvo-icon icon-device_devices_black">&#xe839;</i> <span class="i-name">icon-device_devices_black</span><span class="i-code">0xe839</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe83a">
+          <i class="volvo-icon icon-device_fax_black">&#xe83a;</i> <span class="i-name">icon-device_fax_black</span><span class="i-code">0xe83a</span>
+        </div>
+        <div class="span3" title="Code: 0xe83b">
+          <i class="volvo-icon icon-device_laptop_black">&#xe83b;</i> <span class="i-name">icon-device_laptop_black</span><span class="i-code">0xe83b</span>
+        </div>
+        <div class="span3" title="Code: 0xe83c">
+          <i class="volvo-icon icon-device_mobile-phone_black">&#xe83c;</i> <span class="i-name">icon-device_mobile-phone_black</span><span class="i-code">0xe83c</span>
+        </div>
+        <div class="span3" title="Code: 0xe83d">
+          <i class="volvo-icon icon-file_confidental_black">&#xe83d;</i> <span class="i-name">icon-file_confidental_black</span><span class="i-code">0xe83d</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe83e">
+          <i class="volvo-icon icon-file_copy_black">&#xe83e;</i> <span class="i-name">icon-file_copy_black</span><span class="i-code">0xe83e</span>
+        </div>
+        <div class="span3" title="Code: 0xe83f">
+          <i class="volvo-icon icon-file_document_black">&#xe83f;</i> <span class="i-name">icon-file_document_black</span><span class="i-code">0xe83f</span>
+        </div>
+        <div class="span3" title="Code: 0xe840">
+          <i class="volvo-icon icon-file_landscape_black">&#xe840;</i> <span class="i-name">icon-file_landscape_black</span><span class="i-code">0xe840</span>
+        </div>
+        <div class="span3" title="Code: 0xe841">
+          <i class="volvo-icon icon-file_pdf_black">&#xe841;</i> <span class="i-name">icon-file_pdf_black</span><span class="i-code">0xe841</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe842">
+          <i class="volvo-icon icon-finance_bar-chart_black">&#xe842;</i> <span class="i-name">icon-finance_bar-chart_black</span><span class="i-code">0xe842</span>
+        </div>
+        <div class="span3" title="Code: 0xe844">
+          <i class="volvo-icon icon-finance_chart-up_black">&#xe844;</i> <span class="i-name">icon-finance_chart-up_black</span><span class="i-code">0xe844</span>
+        </div>
+        <div class="span3" title="Code: 0xe845">
+          <i class="volvo-icon icon-finance_chart_black">&#xe845;</i> <span class="i-name">icon-finance_chart_black</span><span class="i-code">0xe845</span>
+        </div>
+        <div class="span3" title="Code: 0xe847">
+          <i class="volvo-icon icon-finance_legal_black">&#xe847;</i> <span class="i-name">icon-finance_legal_black</span><span class="i-code">0xe847</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe848">
+          <i class="volvo-icon icon-finance_linechart_black">&#xe848;</i> <span class="i-name">icon-finance_linechart_black</span><span class="i-code">0xe848</span>
+        </div>
+        <div class="span3" title="Code: 0xe849">
+          <i class="volvo-icon icon-finance_money_black">&#xe849;</i> <span class="i-name">icon-finance_money_black</span><span class="i-code">0xe849</span>
+        </div>
+        <div class="span3" title="Code: 0xe84a">
+          <i class="volvo-icon icon-finance_piechart_black">&#xe84a;</i> <span class="i-name">icon-finance_piechart_black</span><span class="i-code">0xe84a</span>
+        </div>
+        <div class="span3" title="Code: 0xe84b">
+          <i class="volvo-icon icon-navigation_detail-map_black">&#xe84b;</i> <span class="i-name">icon-navigation_detail-map_black</span><span class="i-code">0xe84b</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe84c">
+          <i class="volvo-icon icon-navigation_flag_black">&#xe84c;</i> <span class="i-name">icon-navigation_flag_black</span><span class="i-code">0xe84c</span>
+        </div>
+        <div class="span3" title="Code: 0xe84d">
+          <i class="volvo-icon icon-navigation_map_black">&#xe84d;</i> <span class="i-name">icon-navigation_map_black</span><span class="i-code">0xe84d</span>
+        </div>
+        <div class="span3" title="Code: 0xe84e">
+          <i class="volvo-icon icon-navigation_pin-position_black">&#xe84e;</i> <span class="i-name">icon-navigation_pin-position_black</span><span class="i-code">0xe84e</span>
+        </div>
+        <div class="span3" title="Code: 0xe84f">
+          <i class="volvo-icon icon-navigation_position-indicator_black">&#xe84f;</i> <span class="i-name">icon-navigation_position-indicator_black</span><span class="i-code">0xe84f</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe850">
+          <i class="volvo-icon icon-navigation_starttoend_black">&#xe850;</i> <span class="i-name">icon-navigation_starttoend_black</span><span class="i-code">0xe850</span>
+        </div>
+        <div class="span3" title="Code: 0xe851">
+          <i class="volvo-icon icon-object_anchor_black">&#xe851;</i> <span class="i-name">icon-object_anchor_black</span><span class="i-code">0xe851</span>
+        </div>
+        <div class="span3" title="Code: 0xe852">
+          <i class="volvo-icon icon-object_bell_black">&#xe852;</i> <span class="i-name">icon-object_bell_black</span><span class="i-code">0xe852</span>
+        </div>
+        <div class="span3" title="Code: 0xe853">
+          <i class="volvo-icon icon-object_case_black">&#xe853;</i> <span class="i-name">icon-object_case_black</span><span class="i-code">0xe853</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe854">
+          <i class="volvo-icon icon-object_certificate_black">&#xe854;</i> <span class="i-name">icon-object_certificate_black</span><span class="i-code">0xe854</span>
+        </div>
+        <div class="span3" title="Code: 0xe855">
+          <i class="volvo-icon icon-object_coffee-mug_black">&#xe855;</i> <span class="i-name">icon-object_coffee-mug_black</span><span class="i-code">0xe855</span>
+        </div>
+        <div class="span3" title="Code: 0xe856">
+          <i class="volvo-icon icon-object_coffee_black">&#xe856;</i> <span class="i-name">icon-object_coffee_black</span><span class="i-code">0xe856</span>
+        </div>
+        <div class="span3" title="Code: 0xe857">
+          <i class="volvo-icon icon-object_compass_black">&#xe857;</i> <span class="i-name">icon-object_compass_black</span><span class="i-code">0xe857</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe858">
+          <i class="volvo-icon icon-object_cutlery_black">&#xe858;</i> <span class="i-name">icon-object_cutlery_black</span><span class="i-code">0xe858</span>
+        </div>
+        <div class="span3" title="Code: 0xe859">
+          <i class="volvo-icon icon-object_devices_black">&#xe859;</i> <span class="i-name">icon-object_devices_black</span><span class="i-code">0xe859</span>
+        </div>
+        <div class="span3" title="Code: 0xe85a">
+          <i class="volvo-icon icon-object_diamond_black">&#xe85a;</i> <span class="i-name">icon-object_diamond_black</span><span class="i-code">0xe85a</span>
+        </div>
+        <div class="span3" title="Code: 0xe85b">
+          <i class="volvo-icon icon-object_drop_black">&#xe85b;</i> <span class="i-name">icon-object_drop_black</span><span class="i-code">0xe85b</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe85c">
+          <i class="volvo-icon icon-object_face-mask_black">&#xe85c;</i> <span class="i-name">icon-object_face-mask_black</span><span class="i-code">0xe85c</span>
+        </div>
+        <div class="span3" title="Code: 0xe85d">
+          <i class="volvo-icon icon-object_film_black">&#xe85d;</i> <span class="i-name">icon-object_film_black</span><span class="i-code">0xe85d</span>
+        </div>
+        <div class="span3" title="Code: 0xe85e">
+          <i class="volvo-icon icon-object_film_camera_black">&#xe85e;</i> <span class="i-name">icon-object_film_camera_black</span><span class="i-code">0xe85e</span>
+        </div>
+        <div class="span3" title="Code: 0xe85f">
+          <i class="volvo-icon icon-object_fuel_black">&#xe85f;</i> <span class="i-name">icon-object_fuel_black</span><span class="i-code">0xe85f</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe860">
+          <i class="volvo-icon icon-object_gaming_black">&#xe860;</i> <span class="i-name">icon-object_gaming_black</span><span class="i-code">0xe860</span>
+        </div>
+        <div class="span3" title="Code: 0xe861">
+          <i class="volvo-icon icon-object_gift_black">&#xe861;</i> <span class="i-name">icon-object_gift_black</span><span class="i-code">0xe861</span>
+        </div>
+        <div class="span3" title="Code: 0xe862">
+          <i class="volvo-icon icon-object_horse-shoe_black">&#xe862;</i> <span class="i-name">icon-object_horse-shoe_black</span><span class="i-code">0xe862</span>
+        </div>
+        <div class="span3" title="Code: 0xe863">
+          <i class="volvo-icon icon-object_id-card_black">&#xe863;</i> <span class="i-name">icon-object_id-card_black</span><span class="i-code">0xe863</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe864">
+          <i class="volvo-icon icon-object_info-book_black">&#xe864;</i> <span class="i-name">icon-object_info-book_black</span><span class="i-code">0xe864</span>
+        </div>
+        <div class="span3" title="Code: 0xe865">
+          <i class="volvo-icon icon-object_key_black">&#xe865;</i> <span class="i-name">icon-object_key_black</span><span class="i-code">0xe865</span>
+        </div>
+        <div class="span3" title="Code: 0xe866">
+          <i class="volvo-icon icon-object_labeltag_black">&#xe866;</i> <span class="i-name">icon-object_labeltag_black</span><span class="i-code">0xe866</span>
+        </div>
+        <div class="span3" title="Code: 0xe867">
+          <i class="volvo-icon icon-object_laptop_black">&#xe867;</i> <span class="i-name">icon-object_laptop_black</span><span class="i-code">0xe867</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe868">
+          <i class="volvo-icon icon-object_lifebuoy_black">&#xe868;</i> <span class="i-name">icon-object_lifebuoy_black</span><span class="i-code">0xe868</span>
+        </div>
+        <div class="span3" title="Code: 0xe869">
+          <i class="volvo-icon icon-object_light-bulb_black">&#xe869;</i> <span class="i-name">icon-object_light-bulb_black</span><span class="i-code">0xe869</span>
+        </div>
+        <div class="span3" title="Code: 0xe86a">
+          <i class="volvo-icon icon-object_map_black">&#xe86a;</i> <span class="i-name">icon-object_map_black</span><span class="i-code">0xe86a</span>
+        </div>
+        <div class="span3" title="Code: 0xe86b">
+          <i class="volvo-icon icon-object_mobile-phone_black">&#xe86b;</i> <span class="i-name">icon-object_mobile-phone_black</span><span class="i-code">0xe86b</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe86c">
+          <i class="volvo-icon icon-object_newspaper_black">&#xe86c;</i> <span class="i-name">icon-object_newspaper_black</span><span class="i-code">0xe86c</span>
+        </div>
+        <div class="span3" title="Code: 0xe86d">
+          <i class="volvo-icon icon-object_pages_black">&#xe86d;</i> <span class="i-name">icon-object_pages_black</span><span class="i-code">0xe86d</span>
+        </div>
+        <div class="span3" title="Code: 0xe86e">
+          <i class="volvo-icon icon-object_paperclip_black">&#xe86e;</i> <span class="i-name">icon-object_paperclip_black</span><span class="i-code">0xe86e</span>
+        </div>
+        <div class="span3" title="Code: 0xe86f">
+          <i class="volvo-icon icon-object_pen_black">&#xe86f;</i> <span class="i-name">icon-object_pen_black</span><span class="i-code">0xe86f</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe870">
+          <i class="volvo-icon icon-object_pen_ruler_black">&#xe870;</i> <span class="i-name">icon-object_pen_ruler_black</span><span class="i-code">0xe870</span>
+        </div>
+        <div class="span3" title="Code: 0xe871">
+          <i class="volvo-icon icon-object_pin_black">&#xe871;</i> <span class="i-name">icon-object_pin_black</span><span class="i-code">0xe871</span>
+        </div>
+        <div class="span3" title="Code: 0xe872">
+          <i class="volvo-icon icon-object_portfolio_black">&#xe872;</i> <span class="i-name">icon-object_portfolio_black</span><span class="i-code">0xe872</span>
+        </div>
+        <div class="span3" title="Code: 0xe873">
+          <i class="volvo-icon icon-object_puzzle_black">&#xe873;</i> <span class="i-name">icon-object_puzzle_black</span><span class="i-code">0xe873</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe874">
+          <i class="volvo-icon icon-object_qr-scan_black">&#xe874;</i> <span class="i-name">icon-object_qr-scan_black</span><span class="i-code">0xe874</span>
+        </div>
+        <div class="span3" title="Code: 0xe875">
+          <i class="volvo-icon icon-object_safety-shoes_black">&#xe875;</i> <span class="i-name">icon-object_safety-shoes_black</span><span class="i-code">0xe875</span>
+        </div>
+        <div class="span3" title="Code: 0xe876">
+          <i class="volvo-icon icon-object_safety-vest_black">&#xe876;</i> <span class="i-name">icon-object_safety-vest_black</span><span class="i-code">0xe876</span>
+        </div>
+        <div class="span3" title="Code: 0xe877">
+          <i class="volvo-icon icon-object_scissors_black">&#xe877;</i> <span class="i-name">icon-object_scissors_black</span><span class="i-code">0xe877</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe878">
+          <i class="volvo-icon icon-object_shoppingcart_black">&#xe878;</i> <span class="i-name">icon-object_shoppingcart_black</span><span class="i-code">0xe878</span>
+        </div>
+        <div class="span3" title="Code: 0xe879">
+          <i class="volvo-icon icon-object_speaker_black">&#xe879;</i> <span class="i-name">icon-object_speaker_black</span><span class="i-code">0xe879</span>
+        </div>
+        <div class="span3" title="Code: 0xe87a">
+          <i class="volvo-icon icon-object_speed_black">&#xe87a;</i> <span class="i-name">icon-object_speed_black</span><span class="i-code">0xe87a</span>
+        </div>
+        <div class="span3" title="Code: 0xe87b">
+          <i class="volvo-icon icon-object_steeringwheel_black">&#xe87b;</i> <span class="i-name">icon-object_steeringwheel_black</span><span class="i-code">0xe87b</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe87c">
+          <i class="volvo-icon icon-object_timer_black">&#xe87c;</i> <span class="i-name">icon-object_timer_black</span><span class="i-code">0xe87c</span>
+        </div>
+        <div class="span3" title="Code: 0xe87d">
+          <i class="volvo-icon icon-object_trophy_black">&#xe87d;</i> <span class="i-name">icon-object_trophy_black</span><span class="i-code">0xe87d</span>
+        </div>
+        <div class="span3" title="Code: 0xe87e">
+          <i class="volvo-icon icon-object_umbrella_black">&#xe87e;</i> <span class="i-name">icon-object_umbrella_black</span><span class="i-code">0xe87e</span>
+        </div>
+        <div class="span3" title="Code: 0xe87f">
+          <i class="volvo-icon icon-object_weight_1_black">&#xe87f;</i> <span class="i-name">icon-object_weight_1_black</span><span class="i-code">0xe87f</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe880">
+          <i class="volvo-icon icon-object_weight_2_black">&#xe880;</i> <span class="i-name">icon-object_weight_2_black</span><span class="i-code">0xe880</span>
+        </div>
+        <div class="span3" title="Code: 0xe881">
+          <i class="volvo-icon icon-object_wrench_black">&#xe881;</i> <span class="i-name">icon-object_wrench_black</span><span class="i-code">0xe881</span>
+        </div>
+        <div class="span3" title="Code: 0xe882">
+          <i class="volvo-icon icon-people_crowd_black">&#xe882;</i> <span class="i-name">icon-people_crowd_black</span><span class="i-code">0xe882</span>
+        </div>
+        <div class="span3" title="Code: 0xe883">
+          <i class="volvo-icon icon-people_kid_black">&#xe883;</i> <span class="i-name">icon-people_kid_black</span><span class="i-code">0xe883</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe884">
+          <i class="volvo-icon icon-people_man_black">&#xe884;</i> <span class="i-name">icon-people_man_black</span><span class="i-code">0xe884</span>
+        </div>
+        <div class="span3" title="Code: 0xe885">
+          <i class="volvo-icon icon-people_open-dialogue_black">&#xe885;</i> <span class="i-name">icon-people_open-dialogue_black</span><span class="i-code">0xe885</span>
+        </div>
+        <div class="span3" title="Code: 0xe886">
+          <i class="volvo-icon icon-people_operator_black">&#xe886;</i> <span class="i-name">icon-people_operator_black</span><span class="i-code">0xe886</span>
+        </div>
+        <div class="span3" title="Code: 0xe887">
+          <i class="volvo-icon icon-people_person-driver_black">&#xe887;</i> <span class="i-name">icon-people_person-driver_black</span><span class="i-code">0xe887</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe888">
+          <i class="volvo-icon icon-people_person_black">&#xe888;</i> <span class="i-name">icon-people_person_black</span><span class="i-code">0xe888</span>
+        </div>
+        <div class="span3" title="Code: 0xe889">
+          <i class="volvo-icon icon-people_wheelchair_black">&#xe889;</i> <span class="i-name">icon-people_wheelchair_black</span><span class="i-code">0xe889</span>
+        </div>
+        <div class="span3" title="Code: 0xe88a">
+          <i class="volvo-icon icon-people_woman_black">&#xe88a;</i> <span class="i-name">icon-people_woman_black</span><span class="i-code">0xe88a</span>
+        </div>
+        <div class="span3" title="Code: 0xe88b">
+          <i class="volvo-icon icon-product_ce_articulated-hauler_black">&#xe88b;</i> <span class="i-name">icon-product_ce_articulated-hauler_black</span><span class="i-code">0xe88b</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe88c">
+          <i class="volvo-icon icon-product_ce_crawler_black">&#xe88c;</i> <span class="i-name">icon-product_ce_crawler_black</span><span class="i-code">0xe88c</span>
+        </div>
+        <div class="span3" title="Code: 0xe88d">
+          <i class="volvo-icon icon-product_ce_excavator_black">&#xe88d;</i> <span class="i-name">icon-product_ce_excavator_black</span><span class="i-code">0xe88d</span>
+        </div>
+        <div class="span3" title="Code: 0xe88e">
+          <i class="volvo-icon icon-product_ce_hauler_black">&#xe88e;</i> <span class="i-name">icon-product_ce_hauler_black</span><span class="i-code">0xe88e</span>
+        </div>
+        <div class="span3" title="Code: 0xe88f">
+          <i class="volvo-icon icon-product_ce_wheel-loader_black">&#xe88f;</i> <span class="i-name">icon-product_ce_wheel-loader_black</span><span class="i-code">0xe88f</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe890">
+          <i class="volvo-icon icon-product_construction_black">&#xe890;</i> <span class="i-name">icon-product_construction_black</span><span class="i-code">0xe890</span>
+        </div>
+        <div class="span3" title="Code: 0xe891">
+          <i class="volvo-icon icon-product_distribution_black">&#xe891;</i> <span class="i-name">icon-product_distribution_black</span><span class="i-code">0xe891</span>
+        </div>
+        <div class="span3" title="Code: 0xe892">
+          <i class="volvo-icon icon-product_longhaul_black">&#xe892;</i> <span class="i-name">icon-product_longhaul_black</span><span class="i-code">0xe892</span>
+        </div>
+        <div class="span3" title="Code: 0xe893">
+          <i class="volvo-icon icon-product_service-and-maintenance_black">&#xe893;</i> <span class="i-name">icon-product_service-and-maintenance_black</span><span class="i-code">0xe893</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe894">
+          <i class="volvo-icon icon-product_v_bus_black">&#xe894;</i> <span class="i-name">icon-product_v_bus_black</span><span class="i-code">0xe894</span>
+        </div>
+        <div class="span3" title="Code: 0xe895">
+          <i class="volvo-icon icon-product_v_penta_marine_black">&#xe895;</i> <span class="i-name">icon-product_v_penta_marine_black</span><span class="i-code">0xe895</span>
+        </div>
+        <div class="span3" title="Code: 0xe896">
+          <i class="volvo-icon icon-product_v_truck_black">&#xe896;</i> <span class="i-name">icon-product_v_truck_black</span><span class="i-code">0xe896</span>
+        </div>
+        <div class="span3" title="Code: 0xe897">
+          <i class="volvo-icon icon-product_v_vtna_black">&#xe897;</i> <span class="i-name">icon-product_v_vtna_black</span><span class="i-code">0xe897</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe898">
+          <i class="volvo-icon icon-sustainability_battery_black">&#xe898;</i> <span class="i-name">icon-sustainability_battery_black</span><span class="i-code">0xe898</span>
+        </div>
+        <div class="span3" title="Code: 0xe899">
+          <i class="volvo-icon icon-sustainability_biodiversity_black">&#xe899;</i> <span class="i-name">icon-sustainability_biodiversity_black</span><span class="i-code">0xe899</span>
+        </div>
+        <div class="span3" title="Code: 0xe89a">
+          <i class="volvo-icon icon-sustainability_chemical_black">&#xe89a;</i> <span class="i-name">icon-sustainability_chemical_black</span><span class="i-code">0xe89a</span>
+        </div>
+        <div class="span3" title="Code: 0xe89b">
+          <i class="volvo-icon icon-sustainability_climate_greenhouse_black">&#xe89b;</i> <span class="i-name">icon-sustainability_climate_greenhouse_black</span><span class="i-code">0xe89b</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe89c">
+          <i class="volvo-icon icon-sustainability_climate_resources_black">&#xe89c;</i> <span class="i-name">icon-sustainability_climate_resources_black</span><span class="i-code">0xe89c</span>
+        </div>
+        <div class="span3" title="Code: 0xe89d">
+          <i class="volvo-icon icon-sustainability_earth_black">&#xe89d;</i> <span class="i-name">icon-sustainability_earth_black</span><span class="i-code">0xe89d</span>
+        </div>
+        <div class="span3" title="Code: 0xe89e">
+          <i class="volvo-icon icon-sustainability_energy-01_black">&#xe89e;</i> <span class="i-name">icon-sustainability_energy-01_black</span><span class="i-code">0xe89e</span>
+        </div>
+        <div class="span3" title="Code: 0xe89f">
+          <i class="volvo-icon icon-sustainability_energy-02_black">&#xe89f;</i> <span class="i-name">icon-sustainability_energy-02_black</span><span class="i-code">0xe89f</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8a0">
+          <i class="volvo-icon icon-sustainability_energy-balance-01_black">&#xe8a0;</i> <span class="i-name">icon-sustainability_energy-balance-01_black</span><span class="i-code">0xe8a0</span>
+        </div>
+        <div class="span3" title="Code: 0xe8a1">
+          <i class="volvo-icon icon-sustainability_energy-balance-02_black">&#xe8a1;</i> <span class="i-name">icon-sustainability_energy-balance-02_black</span><span class="i-code">0xe8a1</span>
+        </div>
+        <div class="span3" title="Code: 0xe8a2">
+          <i class="volvo-icon icon-sustainability_energy-kwh_black">&#xe8a2;</i> <span class="i-name">icon-sustainability_energy-kwh_black</span><span class="i-code">0xe8a2</span>
+        </div>
+        <div class="span3" title="Code: 0xe8a3">
+          <i class="volvo-icon icon-sustainability_energy_black">&#xe8a3;</i> <span class="i-name">icon-sustainability_energy_black</span><span class="i-code">0xe8a3</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8a4">
+          <i class="volvo-icon icon-sustainability_ev-charge_black">&#xe8a4;</i> <span class="i-name">icon-sustainability_ev-charge_black</span><span class="i-code">0xe8a4</span>
+        </div>
+        <div class="span3" title="Code: 0xe8a5">
+          <i class="volvo-icon icon-sustainability_fish_black">&#xe8a5;</i> <span class="i-name">icon-sustainability_fish_black</span><span class="i-code">0xe8a5</span>
+        </div>
+        <div class="span3" title="Code: 0xe8a6">
+          <i class="volvo-icon icon-sustainability_heat-exchange_black">&#xe8a6;</i> <span class="i-name">icon-sustainability_heat-exchange_black</span><span class="i-code">0xe8a6</span>
+        </div>
+        <div class="span3" title="Code: 0xe8a7">
+          <i class="volvo-icon icon-sustainability_heat-recovery_black">&#xe8a7;</i> <span class="i-name">icon-sustainability_heat-recovery_black</span><span class="i-code">0xe8a7</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8a8">
+          <i class="volvo-icon icon-sustainability_rain-cloud_black">&#xe8a8;</i> <span class="i-name">icon-sustainability_rain-cloud_black</span><span class="i-code">0xe8a8</span>
+        </div>
+        <div class="span3" title="Code: 0xe8a9">
+          <i class="volvo-icon icon-sustainability_recycling_black">&#xe8a9;</i> <span class="i-name">icon-sustainability_recycling_black</span><span class="i-code">0xe8a9</span>
+        </div>
+        <div class="span3" title="Code: 0xe8aa">
+          <i class="volvo-icon icon-sustainability_save-water_black">&#xe8aa;</i> <span class="i-name">icon-sustainability_save-water_black</span><span class="i-code">0xe8aa</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ab">
+          <i class="volvo-icon icon-sustainability_solarpower-01_black">&#xe8ab;</i> <span class="i-name">icon-sustainability_solarpower-01_black</span><span class="i-code">0xe8ab</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8ac">
+          <i class="volvo-icon icon-sustainability_solarpower-02_black">&#xe8ac;</i> <span class="i-name">icon-sustainability_solarpower-02_black</span><span class="i-code">0xe8ac</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ad">
+          <i class="volvo-icon icon-sustainability_sun_black">&#xe8ad;</i> <span class="i-name">icon-sustainability_sun_black</span><span class="i-code">0xe8ad</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ae">
+          <i class="volvo-icon icon-sustainability_waste-recycling_black">&#xe8ae;</i> <span class="i-name">icon-sustainability_waste-recycling_black</span><span class="i-code">0xe8ae</span>
+        </div>
+        <div class="span3" title="Code: 0xe8af">
+          <i class="volvo-icon icon-sustainability_waste_black">&#xe8af;</i> <span class="i-name">icon-sustainability_waste_black</span><span class="i-code">0xe8af</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8b0">
+          <i class="volvo-icon icon-sustainability_windpower_black">&#xe8b0;</i> <span class="i-name">icon-sustainability_windpower_black</span><span class="i-code">0xe8b0</span>
+        </div>
+        <div class="span3" title="Code: 0xe8b1">
+          <i class="volvo-icon icon-symbol_add-plus_black">&#xe8b1;</i> <span class="i-name">icon-symbol_add-plus_black</span><span class="i-code">0xe8b1</span>
+        </div>
+        <div class="span3" title="Code: 0xe8b2">
+          <i class="volvo-icon icon-symbol_arrow-down_black">&#xe8b2;</i> <span class="i-name">icon-symbol_arrow-down_black</span><span class="i-code">0xe8b2</span>
+        </div>
+        <div class="span3" title="Code: 0xe8b3">
+          <i class="volvo-icon icon-symbol_arrow-left_black">&#xe8b3;</i> <span class="i-name">icon-symbol_arrow-left_black</span><span class="i-code">0xe8b3</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8b4">
+          <i class="volvo-icon icon-symbol_arrow-right_black">&#xe8b4;</i> <span class="i-name">icon-symbol_arrow-right_black</span><span class="i-code">0xe8b4</span>
+        </div>
+        <div class="span3" title="Code: 0xe8b5">
+          <i class="volvo-icon icon-symbol_arrow-up_black">&#xe8b5;</i> <span class="i-name">icon-symbol_arrow-up_black</span><span class="i-code">0xe8b5</span>
+        </div>
+        <div class="span3" title="Code: 0xe8b6">
+          <i class="volvo-icon icon-symbol_c_black">&#xe8b6;</i> <span class="i-name">icon-symbol_c_black</span><span class="i-code">0xe8b6</span>
+        </div>
+        <div class="span3" title="Code: 0xe8b7">
+          <i class="volvo-icon icon-symbol_check-square_black">&#xe8b7;</i> <span class="i-name">icon-symbol_check-square_black</span><span class="i-code">0xe8b7</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8b8">
+          <i class="volvo-icon icon-symbol_check_black">&#xe8b8;</i> <span class="i-name">icon-symbol_check_black</span><span class="i-code">0xe8b8</span>
+        </div>
+        <div class="span3" title="Code: 0xe8b9">
+          <i class="volvo-icon icon-symbol_clear-agreements_black">&#xe8b9;</i> <span class="i-name">icon-symbol_clear-agreements_black</span><span class="i-code">0xe8b9</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ba">
+          <i class="volvo-icon icon-symbol_dollar_black">&#xe8ba;</i> <span class="i-name">icon-symbol_dollar_black</span><span class="i-code">0xe8ba</span>
+        </div>
+        <div class="span3" title="Code: 0xe8bb">
+          <i class="volvo-icon icon-symbol_euro_black">&#xe8bb;</i> <span class="i-name">icon-symbol_euro_black</span><span class="i-code">0xe8bb</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8bc">
+          <i class="volvo-icon icon-symbol_exclamation-mark_black">&#xe8bc;</i> <span class="i-name">icon-symbol_exclamation-mark_black</span><span class="i-code">0xe8bc</span>
+        </div>
+        <div class="span3" title="Code: 0xe8bd">
+          <i class="volvo-icon icon-symbol_fuel-saving_1_black">&#xe8bd;</i> <span class="i-name">icon-symbol_fuel-saving_1_black</span><span class="i-code">0xe8bd</span>
+        </div>
+        <div class="span3" title="Code: 0xe8be">
+          <i class="volvo-icon icon-symbol_fuel-saving_2_black">&#xe8be;</i> <span class="i-name">icon-symbol_fuel-saving_2_black</span><span class="i-code">0xe8be</span>
+        </div>
+        <div class="span3" title="Code: 0xe8bf">
+          <i class="volvo-icon icon-symbol_hashtag_black">&#xe8bf;</i> <span class="i-name">icon-symbol_hashtag_black</span><span class="i-code">0xe8bf</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8c0">
+          <i class="volvo-icon icon-symbol_info_black">&#xe8c0;</i> <span class="i-name">icon-symbol_info_black</span><span class="i-code">0xe8c0</span>
+        </div>
+        <div class="span3" title="Code: 0xe8c1">
+          <i class="volvo-icon icon-symbol_mail_black">&#xe8c1;</i> <span class="i-name">icon-symbol_mail_black</span><span class="i-code">0xe8c1</span>
+        </div>
+        <div class="span3" title="Code: 0xe8c2">
+          <i class="volvo-icon icon-symbol_minus_black">&#xe8c2;</i> <span class="i-name">icon-symbol_minus_black</span><span class="i-code">0xe8c2</span>
+        </div>
+        <div class="span3" title="Code: 0xe8c3">
+          <i class="volvo-icon icon-symbol_performance_black">&#xe8c3;</i> <span class="i-name">icon-symbol_performance_black</span><span class="i-code">0xe8c3</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8c4">
+          <i class="volvo-icon icon-symbol_right-first-time_black">&#xe8c4;</i> <span class="i-name">icon-symbol_right-first-time_black</span><span class="i-code">0xe8c4</span>
+        </div>
+        <div class="span3" title="Code: 0xe8c5">
+          <i class="volvo-icon icon-symbol_star_black">&#xe8c5;</i> <span class="i-name">icon-symbol_star_black</span><span class="i-code">0xe8c5</span>
+        </div>
+        <div class="span3" title="Code: 0xe8c6">
+          <i class="volvo-icon icon-symbol_warning_black">&#xe8c6;</i> <span class="i-name">icon-symbol_warning_black</span><span class="i-code">0xe8c6</span>
+        </div>
+        <div class="span3" title="Code: 0xe8c7">
+          <i class="volvo-icon icon-time_alarm_black">&#xe8c7;</i> <span class="i-name">icon-time_alarm_black</span><span class="i-code">0xe8c7</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8c8">
+          <i class="volvo-icon icon-time_clock_black">&#xe8c8;</i> <span class="i-name">icon-time_clock_black</span><span class="i-code">0xe8c8</span>
+        </div>
+        <div class="span3" title="Code: 0xe8c9">
+          <i class="volvo-icon icon-time_date_black">&#xe8c9;</i> <span class="i-name">icon-time_date_black</span><span class="i-code">0xe8c9</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ca">
+          <i class="volvo-icon icon-time_empty-calendar_black">&#xe8ca;</i> <span class="i-name">icon-time_empty-calendar_black</span><span class="i-code">0xe8ca</span>
+        </div>
+        <div class="span3" title="Code: 0xe8cb">
+          <i class="volvo-icon icon-time_moon_black">&#xe8cb;</i> <span class="i-name">icon-time_moon_black</span><span class="i-code">0xe8cb</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8cc">
+          <i class="volvo-icon icon-time_set-time_black">&#xe8cc;</i> <span class="i-name">icon-time_set-time_black</span><span class="i-code">0xe8cc</span>
+        </div>
+        <div class="span3" title="Code: 0xe8cd">
+          <i class="volvo-icon icon-transportation_airplane_black">&#xe8cd;</i> <span class="i-name">icon-transportation_airplane_black</span><span class="i-code">0xe8cd</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ce">
+          <i class="volvo-icon icon-transportation_boat_black">&#xe8ce;</i> <span class="i-name">icon-transportation_boat_black</span><span class="i-code">0xe8ce</span>
+        </div>
+        <div class="span3" title="Code: 0xe8cf">
+          <i class="volvo-icon icon-transportation_car_black">&#xe8cf;</i> <span class="i-name">icon-transportation_car_black</span><span class="i-code">0xe8cf</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8d0">
+          <i class="volvo-icon icon-transportation_metro_black">&#xe8d0;</i> <span class="i-name">icon-transportation_metro_black</span><span class="i-code">0xe8d0</span>
+        </div>
+        <div class="span3" title="Code: 0xe8d1">
+          <i class="volvo-icon icon-transportation_train_black">&#xe8d1;</i> <span class="i-name">icon-transportation_train_black</span><span class="i-code">0xe8d1</span>
+        </div>
+        <div class="span3" title="Code: 0xe8d2">
+          <i class="volvo-icon icon-world_2-fingers_black">&#xe8d2;</i> <span class="i-name">icon-world_2-fingers_black</span><span class="i-code">0xe8d2</span>
+        </div>
+        <div class="span3" title="Code: 0xe8d3">
+          <i class="volvo-icon icon-world_building_black">&#xe8d3;</i> <span class="i-name">icon-world_building_black</span><span class="i-code">0xe8d3</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8d4">
+          <i class="volvo-icon icon-world_built-by-people_black">&#xe8d4;</i> <span class="i-name">icon-world_built-by-people_black</span><span class="i-code">0xe8d4</span>
+        </div>
+        <div class="span3" title="Code: 0xe8d5">
+          <i class="volvo-icon icon-world_chat-bubble_black">&#xe8d5;</i> <span class="i-name">icon-world_chat-bubble_black</span><span class="i-code">0xe8d5</span>
+        </div>
+        <div class="span3" title="Code: 0xe8d6">
+          <i class="volvo-icon icon-world_chat-bubbles_black">&#xe8d6;</i> <span class="i-name">icon-world_chat-bubbles_black</span><span class="i-code">0xe8d6</span>
+        </div>
+        <div class="span3" title="Code: 0xe8d7">
+          <i class="volvo-icon icon-world_city_black">&#xe8d7;</i> <span class="i-name">icon-world_city_black</span><span class="i-code">0xe8d7</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8d8">
+          <i class="volvo-icon icon-world_climate_black">&#xe8d8;</i> <span class="i-name">icon-world_climate_black</span><span class="i-code">0xe8d8</span>
+        </div>
+        <div class="span3" title="Code: 0xe8d9">
+          <i class="volvo-icon icon-world_cloud-download_black">&#xe8d9;</i> <span class="i-name">icon-world_cloud-download_black</span><span class="i-code">0xe8d9</span>
+        </div>
+        <div class="span3" title="Code: 0xe8da">
+          <i class="volvo-icon icon-world_cloud-upload_black">&#xe8da;</i> <span class="i-name">icon-world_cloud-upload_black</span><span class="i-code">0xe8da</span>
+        </div>
+        <div class="span3" title="Code: 0xe8db">
+          <i class="volvo-icon icon-world_cloud_black">&#xe8db;</i> <span class="i-name">icon-world_cloud_black</span><span class="i-code">0xe8db</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8dc">
+          <i class="volvo-icon icon-world_eye_black">&#xe8dc;</i> <span class="i-name">icon-world_eye_black</span><span class="i-code">0xe8dc</span>
+        </div>
+        <div class="span3" title="Code: 0xe8dd">
+          <i class="volvo-icon icon-world_foot_black">&#xe8dd;</i> <span class="i-name">icon-world_foot_black</span><span class="i-code">0xe8dd</span>
+        </div>
+        <div class="span3" title="Code: 0xe8de">
+          <i class="volvo-icon icon-world_globe_black">&#xe8de;</i> <span class="i-name">icon-world_globe_black</span><span class="i-code">0xe8de</span>
+        </div>
+        <div class="span3" title="Code: 0xe8df">
+          <i class="volvo-icon icon-world_hall_black">&#xe8df;</i> <span class="i-name">icon-world_hall_black</span><span class="i-code">0xe8df</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8e0">
+          <i class="volvo-icon icon-world_hand-stop_black">&#xe8e0;</i> <span class="i-name">icon-world_hand-stop_black</span><span class="i-code">0xe8e0</span>
+        </div>
+        <div class="span3" title="Code: 0xe8e1">
+          <i class="volvo-icon icon-world_handfeast_black">&#xe8e1;</i> <span class="i-name">icon-world_handfeast_black</span><span class="i-code">0xe8e1</span>
+        </div>
+        <div class="span3" title="Code: 0xe8e2">
+          <i class="volvo-icon icon-world_handshake_black">&#xe8e2;</i> <span class="i-name">icon-world_handshake_black</span><span class="i-code">0xe8e2</span>
+        </div>
+        <div class="span3" title="Code: 0xe8e3">
+          <i class="volvo-icon icon-world_heart_black">&#xe8e3;</i> <span class="i-name">icon-world_heart_black</span><span class="i-code">0xe8e3</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8e4">
+          <i class="volvo-icon icon-world_highway_black">&#xe8e4;</i> <span class="i-name">icon-world_highway_black</span><span class="i-code">0xe8e4</span>
+        </div>
+        <div class="span3" title="Code: 0xe8e5">
+          <i class="volvo-icon icon-world_industry_black">&#xe8e5;</i> <span class="i-name">icon-world_industry_black</span><span class="i-code">0xe8e5</span>
+        </div>
+        <div class="span3" title="Code: 0xe8e6">
+          <i class="volvo-icon icon-world_landscape_black">&#xe8e6;</i> <span class="i-name">icon-world_landscape_black</span><span class="i-code">0xe8e6</span>
+        </div>
+        <div class="span3" title="Code: 0xe8e7">
+          <i class="volvo-icon icon-world_match-customer-needs_black">&#xe8e7;</i> <span class="i-name">icon-world_match-customer-needs_black</span><span class="i-code">0xe8e7</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8e8">
+          <i class="volvo-icon icon-world_ongoing-chat_black">&#xe8e8;</i> <span class="i-name">icon-world_ongoing-chat_black</span><span class="i-code">0xe8e8</span>
+        </div>
+        <div class="span3" title="Code: 0xe8e9">
+          <i class="volvo-icon icon-world_pedestrian-lanes_black">&#xe8e9;</i> <span class="i-name">icon-world_pedestrian-lanes_black</span><span class="i-code">0xe8e9</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ea">
+          <i class="volvo-icon icon-world_slope_1_black">&#xe8ea;</i> <span class="i-name">icon-world_slope_1_black</span><span class="i-code">0xe8ea</span>
+        </div>
+        <div class="span3" title="Code: 0xe8eb">
+          <i class="volvo-icon icon-world_slope_2_black">&#xe8eb;</i> <span class="i-name">icon-world_slope_2_black</span><span class="i-code">0xe8eb</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8ec">
+          <i class="volvo-icon icon-world_snow_black">&#xe8ec;</i> <span class="i-name">icon-world_snow_black</span><span class="i-code">0xe8ec</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ed">
+          <i class="volvo-icon icon-world_team-work_black">&#xe8ed;</i> <span class="i-name">icon-world_team-work_black</span><span class="i-code">0xe8ed</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ee">
+          <i class="volvo-icon icon-world_thums-down_black">&#xe8ee;</i> <span class="i-name">icon-world_thums-down_black</span><span class="i-code">0xe8ee</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ef">
+          <i class="volvo-icon icon-world_thums-up_black">&#xe8ef;</i> <span class="i-name">icon-world_thums-up_black</span><span class="i-code">0xe8ef</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8f0">
+          <i class="volvo-icon icon-world_tree_black">&#xe8f0;</i> <span class="i-name">icon-world_tree_black</span><span class="i-code">0xe8f0</span>
+        </div>
+        <div class="span3" title="Code: 0xe8f1">
+          <i class="volvo-icon icon-world_warm-welcome_black">&#xe8f1;</i> <span class="i-name">icon-world_warm-welcome_black</span><span class="i-code">0xe8f1</span>
+        </div>
+        <div class="span3" title="Code: 0xe8f2">
+          <i class="volvo-icon icon-device_calculator_black">&#xe8f2;</i> <span class="i-name">icon-device_calculator_black</span><span class="i-code">0xe8f2</span>
+        </div>
+        <div class="span3" title="Code: 0xe8f3">
+          <i class="volvo-icon icon-finance_calculator_black">&#xe8f3;</i> <span class="i-name">icon-finance_calculator_black</span><span class="i-code">0xe8f3</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8f4">
+          <i class="volvo-icon icon-icon-ac-check">&#xe8f4;</i> <span class="i-name">icon-icon-ac-check</span><span class="i-code">0xe8f4</span>
+        </div>
+        <div class="span3" title="Code: 0xe8f5">
+          <i class="volvo-icon icon-icon-accessories">&#xe8f5;</i> <span class="i-name">icon-icon-accessories</span><span class="i-code">0xe8f5</span>
+        </div>
+        <div class="span3" title="Code: 0xe8f6">
+          <i class="volvo-icon icon-icon-air-cabin-filter">&#xe8f6;</i> <span class="i-name">icon-icon-air-cabin-filter</span><span class="i-code">0xe8f6</span>
+        </div>
+        <div class="span3" title="Code: 0xe8f7">
+          <i class="volvo-icon icon-icon-alignment">&#xe8f7;</i> <span class="i-name">icon-icon-alignment</span><span class="i-code">0xe8f7</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8f8">
+          <i class="volvo-icon icon-icon-battery">&#xe8f8;</i> <span class="i-name">icon-icon-battery</span><span class="i-code">0xe8f8</span>
+        </div>
+        <div class="span3" title="Code: 0xe8f9">
+          <i class="volvo-icon icon-icon-brakes">&#xe8f9;</i> <span class="i-name">icon-icon-brakes</span><span class="i-code">0xe8f9</span>
+        </div>
+        <div class="span3" title="Code: 0xe8fa">
+          <i class="volvo-icon icon-icon-fluid-levels">&#xe8fa;</i> <span class="i-name">icon-icon-fluid-levels</span><span class="i-code">0xe8fa</span>
+        </div>
+        <div class="span3" title="Code: 0xe8fb">
+          <i class="volvo-icon icon-icon-maintenance">&#xe8fb;</i> <span class="i-name">icon-icon-maintenance</span><span class="i-code">0xe8fb</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe8fc">
+          <i class="volvo-icon icon-icon-motor-oil-check">&#xe8fc;</i> <span class="i-name">icon-icon-motor-oil-check</span><span class="i-code">0xe8fc</span>
+        </div>
+        <div class="span3" title="Code: 0xe8fd">
+          <i class="volvo-icon icon-icon-motor-oil">&#xe8fd;</i> <span class="i-name">icon-icon-motor-oil</span><span class="i-code">0xe8fd</span>
+        </div>
+        <div class="span3" title="Code: 0xe8fe">
+          <i class="volvo-icon icon-icon-multi-point-inspection">&#xe8fe;</i> <span class="i-name">icon-icon-multi-point-inspection</span><span class="i-code">0xe8fe</span>
+        </div>
+        <div class="span3" title="Code: 0xe8ff">
+          <i class="volvo-icon icon-icon-odometer">&#xe8ff;</i> <span class="i-name">icon-icon-odometer</span><span class="i-code">0xe8ff</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe900">
+          <i class="volvo-icon icon-icon-oil-filter">&#xe900;</i> <span class="i-name">icon-icon-oil-filter</span><span class="i-code">0xe900</span>
+        </div>
+        <div class="span3" title="Code: 0xe901">
+          <i class="volvo-icon icon-icon-service-fluids">&#xe901;</i> <span class="i-name">icon-icon-service-fluids</span><span class="i-code">0xe901</span>
+        </div>
+        <div class="span3" title="Code: 0xe902">
+          <i class="volvo-icon icon-icon-service-schedule">&#xe902;</i> <span class="i-name">icon-icon-service-schedule</span><span class="i-code">0xe902</span>
+        </div>
+        <div class="span3" title="Code: 0xe903">
+          <i class="volvo-icon icon-icon-spark-plug">&#xe903;</i> <span class="i-name">icon-icon-spark-plug</span><span class="i-code">0xe903</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe904">
+          <i class="volvo-icon icon-icon-timing-belt">&#xe904;</i> <span class="i-name">icon-icon-timing-belt</span><span class="i-code">0xe904</span>
+        </div>
+        <div class="span3" title="Code: 0xe905">
+          <i class="volvo-icon icon-icon-tire-pressure">&#xe905;</i> <span class="i-name">icon-icon-tire-pressure</span><span class="i-code">0xe905</span>
+        </div>
+        <div class="span3" title="Code: 0xe906">
+          <i class="volvo-icon icon-icon-tire">&#xe906;</i> <span class="i-name">icon-icon-tire</span><span class="i-code">0xe906</span>
+        </div>
+        <div class="span3" title="Code: 0xe907">
+          <i class="volvo-icon icon-icon-transmission">&#xe907;</i> <span class="i-name">icon-icon-transmission</span><span class="i-code">0xe907</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span3" title="Code: 0xe908">
+          <i class="volvo-icon icon-icon-vehicle-collision">&#xe908;</i> <span class="i-name">icon-icon-vehicle-collision</span><span class="i-code">0xe908</span>
+        </div>
+        <div class="span3" title="Code: 0xe909">
+          <i class="volvo-icon icon-icon-vehicle-health">&#xe909;</i> <span class="i-name">icon-icon-vehicle-health</span><span class="i-code">0xe909</span>
+        </div>
+        <div class="span3" title="Code: 0xe90a">
+          <i class="volvo-icon icon-icon-vehicle-protection">&#xe90a;</i> <span class="i-name">icon-icon-vehicle-protection</span><span class="i-code">0xe90a</span>
+        </div>
+        <div class="span3" title="Code: 0xe90b">
+          <i class="volvo-icon icon-icon-windshield-wipers">&#xe90b;</i> <span class="i-name">icon-icon-windshield-wipers</span><span class="i-code">0xe90b</span>
+        </div>
+      </div>
+    <div class="container footer">Generated by <a href="https://fontello.com">fontello.com</a></div>
+  </body>
+</html>
